@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.inventory_management.ware_house.details.WareHouseDetailsFragment">
+
+    <data>
+        <variable
+            name="site"
+            type="com.israel.livraisonexpresspos.models.inventory_management_models.Site" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="Details du site"
+            android:background="@color/white"
+            android:minHeight="?attr/actionBarSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:elevation="@dimen/dp_10"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0"
+            android:background="@color/grey_3"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_10">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_ware_house_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:elevation="@dimen/dp_2"
+                    app:cardCornerRadius="@dimen/dp_5">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/dp_10">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/cl_ware_house_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toTopOf="@+id/cl_ware_house_manager"
+                            android:layout_marginBottom="@dimen/dp_10">
+
+                            <ImageView
+                                android:id="@+id/icon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_ware_house_24"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"/>
+
+                            <TextView
+                                android:id="@+id/tv_ware_house_name"
+                                android:layout_width="@dimen/dp_0"
+                                android:layout_height="wrap_content"
+                                android:text="@{site.name}"
+                                android:textStyle="bold"
+                                android:paddingHorizontal="@dimen/dp_10"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toStartOf="@id/btn_menu"
+                                app:layout_constraintStart_toEndOf="@+id/icon"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:text="Nom du site" />
+
+                            <ImageButton
+                                android:id="@+id/btn_menu"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="@color/transparent"
+                                android:src="@drawable/ic_round_more_vert_24"
+                                android:tint="@color/grey_90"
+                                android:padding="@dimen/dp_5"
+                                android:foreground="?attr/selectableItemBackground"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/cl_ware_house_manager"
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toBottomOf="@+id/cl_ware_house_name"
+                            app:layout_constraintBottom_toTopOf="@+id/cl_ware_house_type"
+                            android:layout_marginBottom="@dimen/dp_10">
+
+                            <TextView
+                                android:id="@+id/tv_ware_house_manager"
+                                android:layout_width="@dimen/dp_0"
+                                android:layout_height="wrap_content"
+                                android:text="@{site.name}"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:text="Nom du gestionnaire" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/cl_ware_house_type"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dp_10"
+                            app:layout_constraintBottom_toTopOf="@+id/cl_ware_house_date"
+                            app:layout_constraintTop_toBottomOf="@+id/cl_ware_house_name">
+
+                            <TextView
+                                android:id="@+id/tv_ware_house_type_label"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Type : "
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toStartOf="@+id/tv_ware_house_type"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/tv_ware_house_type"
+                                android:layout_width="@dimen/dp_0"
+                                android:layout_height="wrap_content"
+                                android:paddingHorizontal="@dimen/dp_10"
+                                android:text="@{site.type_site}"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/tv_ware_house_type_label"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:text="Type du site" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/cl_ware_house_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_10"
+                            app:layout_constraintTop_toBottomOf="@+id/cl_ware_house_type">
+
+                            <TextView
+                                android:id="@+id/tv_ware_house_date_label"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Date de création : "
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toStartOf="@+id/tv_ware_house_date"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/tv_ware_house_date"
+                                android:layout_width="@dimen/dp_0"
+                                android:layout_height="wrap_content"
+                                android:paddingHorizontal="@dimen/dp_10"
+                                android:text="@{site.created_at}"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/tv_ware_house_date_label"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:text="Type du site" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+
+                <TextView
+                    android:id="@+id/tv_managers_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Gestionnaire(s) du site"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_marginVertical="@dimen/dp_10"
+                    android:paddingVertical="@dimen/dp_10"
+                    app:layout_constraintTop_toBottomOf="@id/card_ware_house_info"/>
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_ware_house_manager"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/tv_managers_label"
+                    android:elevation="@dimen/dp_2"
+                    app:cardCornerRadius="@dimen/dp_5">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/dp_10">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_managers"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            tools:listitem="@layout/item_stock_manager"
+                            tools:itemCount="2"
+                            app:layout_constraintTop_toTopOf="parent"/>
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+
+                <TextView
+                    android:id="@+id/tv_moves_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Voir les mouvements du site"
+                    android:layout_marginVertical="@dimen/dp_10"
+                    android:paddingVertical="@dimen/dp_10"
+                    app:layout_constraintTop_toBottomOf="@id/card_ware_house_manager"
+                    app:layout_constraintBottom_toTopOf="@+id/card_ware_house_moves"/>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@id/card_ware_house_moves"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="@dimen/dp_5"
+                    app:cardElevation="@dimen/dp_5"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_moves_label">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp_10">
+
+
+                        <androidx.coordinatorlayout.widget.CoordinatorLayout
+                            android:id="@+id/field_move_type"
+                            android:layout_width="@dimen/dp_0"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/dp_5"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/field_date">
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Type de mouvement"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
+                                <AutoCompleteTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="none" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+                        <androidx.coordinatorlayout.widget.CoordinatorLayout
+                            android:id="@+id/field_date"
+                            android:layout_width="@dimen/dp_0"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_5"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/img_btn_filter"
+                            app:layout_constraintStart_toEndOf="@+id/field_move_type">
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Date"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
+                                <AutoCompleteTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="none" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+                        <ImageButton
+                            android:id="@+id/img_btn_filter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dp_0"
+                            android:clickable="true"
+                            android:paddingHorizontal="@dimen/dp_5"
+                            android:background="@drawable/corner_radius_3"
+                            android:src="@drawable/ic_baseline_search_24"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginStart="@dimen/dp_5"
+                            android:layout_marginBottom="10dp"
+                            android:backgroundTint="@color/colorPrimary"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/field_date"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toTopOf="@+id/divider"
+                            android:focusable="true" />
+
+                        <View
+                            android:id="@+id/divider"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_1"
+                            android:background="@color/grey_3"
+                            android:layout_marginTop="@dimen/dp_10"
+                            app:layout_constraintTop_toBottomOf="@+id/field_date"
+                            app:layout_constraintBottom_toTopOf="@+id/rv_moves"/>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_moves"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            tools:listitem="@layout/item_move"
+                            android:background="@color/grey_3"
+                            app:layout_constraintTop_toBottomOf="@+id/divider">
+
+                        </androidx.recyclerview.widget.RecyclerView>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <View
+                    android:id="@+id/place_holder"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_10"
+                    app:layout_constraintTop_toBottomOf="@id/card_ware_house_moves"/>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

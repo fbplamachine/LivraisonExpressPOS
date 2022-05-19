@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.view.View"/>
+        <import type="android.text.TextUtils"/>
+        <variable
+            name="product"
+            type="com.israel.livraisonexpresspos.models.Product" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:foreground="?attr/selectableItemBackground"
+        android:layout_width="match_parent"
+        android:id="@+id/productItem"
+        android:layout_marginVertical="@dimen/dp_5"
+        android:minHeight="@dimen/dp_50"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="@dimen/dp_80"
+            android:layout_height="@dimen/dp_80"
+            android:src="@color/grey_40"
+            android:id="@+id/ivProduct"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:layout_marginStart="@dimen/dp_10"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivProduct"
+            app:layout_constraintEnd_toEndOf="parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/ivProduct"
+                app:layout_constraintTop_toTopOf="parent"
+                android:orientation="horizontal"
+                android:id="@+id/layoutName"
+                android:gravity="center_vertical">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/tvName"
+                    android:maxLines="2"
+                    android:text="@{product.libelle}"
+                    android:ellipsize="end"
+                    android:textColor="@color/grey_90"
+                    android:textSize="@dimen/sp_16"/>
+                <View
+                    android:layout_width="@dimen/dp_5"
+                    android:layout_height="0dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{String.valueOf(product.prix_unitaire + ` FCFA`)}"
+                    android:textSize="@dimen/sp_15"
+                    android:id="@+id/tvPrice"/>
+                <View
+                    android:layout_width="@dimen/dp_5"
+                    android:layout_height="0dp"/>
+            </LinearLayout>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_8"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{product.detail}"
+                android:maxLines="2"
+                android:visibility="@{TextUtils.isEmpty(product.detail) ? View.GONE : View.VISIBLE}"
+                android:id="@+id/tvDetail"
+                android:ellipsize="end"/>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

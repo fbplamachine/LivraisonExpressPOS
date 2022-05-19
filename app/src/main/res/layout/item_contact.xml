@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="contact"
+            type="com.israel.livraisonexpresspos.models.Contact" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:foreground="?attr/selectableItemBackground"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="@dimen/dp_50"
+            android:layout_margin="@dimen/dp_5"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/dp_50">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_round_blue"
+                android:alpha="0.4" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/white"
+                tools:text="I"
+                android:text="@{contact.fullname.toUpperCase()}"
+                android:maxLength="1"
+                android:id="@+id/tvRound"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_70"
+            android:layout_margin="@dimen/dp_5"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:text="@{contact.fullname}"
+                    tools:text="Israel MEKOMOU" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp_10" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@{contact.telephone + ` (` + contact.provider_name + `)`}"
+                    tools:text="+237693977849"
+                    android:textColor="@color/grey_80" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="@dimen/dp_10"
+                android:layout_height="0dp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_round_more_vert_24"
+                app:tint="@color/grey_80"
+                android:layout_gravity="center"
+                android:id="@+id/ivMore" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

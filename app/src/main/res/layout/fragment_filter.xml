@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:paddingHorizontal="@dimen/dp_20"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <ImageButton
+                android:id="@+id/ibClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_close"
+                app:tint="@color/grey_80"
+                android:padding="@dimen/dp_10"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/filter"
+                android:layout_marginHorizontal="@dimen/dp_20"
+                android:gravity="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/grey_90"/>
+            <ImageButton
+                android:id="@+id/ibFilter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_round_done_24"
+                android:padding="@dimen/dp_10"
+                app:tint="@color/grey_80"/>
+        </LinearLayout>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp_20"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/search_params"
+                    android:layout_marginTop="@dimen/dp_20"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    app:endIconMode="clear_text">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/etFilterPattern"
+                        android:inputType="textVisiblePassword"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <View
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="@dimen/dp_30"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:text="@string/city"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginVertical="@dimen/dp_4"
+                    android:background="@color/overlay_dark_10"/>
+                <com.google.android.material.chip.ChipGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:singleSelection="true"
+                    android:layout_marginVertical="@dimen/dp_5"
+                    android:id="@+id/groupCity">
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tous"
+                        android:checked="true"
+                        android:textColor="@color/white"
+                        android:id="@+id/chipAll"
+                        style="@style/Widget.MaterialComponents.Chip.Filter"
+                        app:checkedIconTint="@color/white"
+                        app:chipBackgroundColor="@color/colorAccent"/>
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/douala"
+                        android:textColor="@color/white"
+                        android:id="@+id/chipDouala"
+                        style="@style/Widget.MaterialComponents.Chip.Filter"
+                        app:checkedIconTint="@color/white"
+                        app:chipBackgroundColor="@color/colorAccent"/>
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/yaounde"
+                        android:id="@+id/chipYaounde"
+                        android:textColor="@color/white"
+                        style="@style/Widget.MaterialComponents.Chip.Filter"
+                        app:checkedIconTint="@color/white"
+                        app:chipBackgroundColor="@color/colorAccent"/>
+                </com.google.android.material.chip.ChipGroup>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginVertical="@dimen/dp_4"
+                    android:background="@color/overlay_dark_10"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                        android:text="Magasin : "/>
+                    <TextView
+                        android:id="@+id/tvShop"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:text="@string/all"
+                        android:paddingHorizontal="@dimen/dp_10"
+                        android:ellipsize="end"
+                        android:textColor="@color/grey_60"
+                        android:gravity="center_vertical"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                        app:drawableEndCompat="@drawable/ic_arrow_drop_down" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginVertical="@dimen/dp_4"
+                    android:background="@color/overlay_dark_10"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                        android:text="Coursier : "/>
+                    <TextView
+                        android:id="@+id/tvDeliveryMan"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_40"
+                        android:text="@string/all"
+                        android:paddingHorizontal="@dimen/dp_10"
+                        android:textColor="@color/grey_60"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                        app:drawableEndCompat="@drawable/ic_arrow_drop_down" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginVertical="@dimen/dp_4"
+                    android:background="@color/overlay_dark_10"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                        android:text="Statut : "/>
+
+                    <TextView
+                        android:id="@+id/tvStatus"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:hint="@string/menu_none"
+                        android:textColor="@color/grey_60"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                        android:paddingHorizontal="@dimen/dp_10"
+                        android:gravity="center_vertical"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginVertical="@dimen/dp_4"
+                    android:background="@color/overlay_dark_10"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    android:id="@+id/layoutAdvancedSearch">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_40"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                            android:text="Date : "/>
+
+                        <TextView
+                            android:id="@+id/tvDateType"
+                            android:layout_weight="2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:drawableRight="@drawable/ic_arrow_drop_down"
+                            android:text="Livraison"
+                            android:textSize="@dimen/sp_14"
+                            android:paddingHorizontal="@dimen/dp_10"
+                            android:gravity="center_vertical"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"/>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginVertical="@dimen/dp_4"
+                        android:background="@color/overlay_dark_10"/>
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:singleSelection="true"
+                        android:layout_marginVertical="@dimen/dp_5"
+                        android:id="@+id/groupDate">
+
+                        <com.google.android.material.chip.Chip
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="aujourd'hui"
+                            android:checked="true"
+                            android:textColor="@color/white"
+                            android:id="@+id/chipToday"
+                            style="@style/Widget.MaterialComponents.Chip.Filter"
+                            app:checkedIconTint="@color/white"
+                            app:chipBackgroundColor="@color/colorAccent"/>
+
+                        <com.google.android.material.chip.Chip
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="hier"
+                            android:id="@+id/chipYesterday"
+                            android:textColor="@color/white"
+                            style="@style/Widget.MaterialComponents.Chip.Filter"
+                            app:checkedIconTint="@color/white"
+                            app:chipBackgroundColor="@color/colorAccent"/>
+
+                        <com.google.android.material.chip.Chip
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="les deux derniers jours"
+                            android:textColor="@color/white"
+                            android:visibility="gone"
+                            android:id="@+id/chipTwoDayEarlier"
+                            style="@style/Widget.MaterialComponents.Chip.Filter"
+                            app:checkedIconTint="@color/white"
+                            app:chipBackgroundColor="@color/colorAccent"/>
+
+                        <com.google.android.material.chip.Chip
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="les trois derniers jours"
+                            android:visibility="gone"
+                            android:id="@+id/chipThreeDayEarlier"
+                            android:textColor="@color/white"
+                            style="@style/Widget.MaterialComponents.Chip.Filter"
+                            app:checkedIconTint="@color/white"
+                            app:chipBackgroundColor="@color/colorAccent"/>
+
+                        <com.google.android.material.chip.Chip
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="demain"
+                            android:textColor="@color/white"
+                            android:id="@+id/chipTomorrow"
+                            style="@style/Widget.MaterialComponents.Chip.Filter"
+                            app:checkedIconTint="@color/white"
+                            app:chipBackgroundColor="@color/colorAccent"/>
+
+                        <com.google.android.material.chip.Chip
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="les deux prochains jours"
+                            android:id="@+id/chipInTwoDays"
+                            android:visibility="gone"
+                            android:textColor="@color/white"
+                            style="@style/Widget.MaterialComponents.Chip.Filter"
+                            app:checkedIconTint="@color/white"
+                            app:chipBackgroundColor="@color/colorAccent"/>
+
+                        <com.google.android.material.chip.Chip
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="les trois prochains jours"
+                            android:visibility="gone"
+                            android:id="@+id/chipInThreeDays"
+                            android:textColor="@color/white"
+                            style="@style/Widget.MaterialComponents.Chip.Filter"
+                            app:checkedIconTint="@color/white"
+                            app:chipBackgroundColor="@color/colorAccent"/>
+                    </com.google.android.material.chip.ChipGroup>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                        android:text="Selection : "/>
+
+                    <TextView
+                        android:id="@+id/selection"
+                        android:layout_weight="2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        tools:text=" du 3 au 5 janvier"
+                        android:textSize="@dimen/sp_14"
+                        android:paddingHorizontal="@dimen/dp_10"
+                        android:gravity="center_vertical"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"/>
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/dp_10"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginVertical="@dimen/dp_10"
+                    android:background="@color/overlay_dark_10"/>
+
+                <TextView
+                    android:id="@+id/tvResetFilter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:text="Vider le filtre"
+                    android:drawableLeft="@drawable/ic_round_delete_outline_24"
+                    android:paddingHorizontal="@dimen/dp_10"
+                    android:paddingVertical="@dimen/dp_5"
+                    android:layout_marginBottom="@dimen/dp_10"/>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>

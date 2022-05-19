@@ -1,0 +1,343 @@
+<resources>
+    <string name="app_name">POS</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Accueil</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+
+    <string name="menu_unassigned">Non Assigné</string>
+    <string name="menu_today">Aujourd\'hui</string>
+    <string name="menu_ongoing">En Cours</string>
+    <string name="menu_completed">Terminées</string>
+    <string name="menu_my_orders">Mes Courses</string>
+    <string name="menu_to_be_treated">A Traiter</string>
+    <string name="menu_place_order">Commandes</string>
+    <string name="orders">Courses</string>f
+    <string name="group_pos">Point de vente</string>
+    <string name="clients">Clients</string>
+    <string name="livraison_express">Livraison Express</string>
+    <string name="email">Email</string>
+    <string name="password">Mot de passe</string>
+    <string name="sign_in">Connexion</string>
+    <string name="livraison_express_logo">Livraison Express Logo</string>
+    <string name="reporting">Statistiques</string>
+    <string name="service_available">Services disponibles à</string>
+    <string name="loading">Chargement en cours…</string>
+    <string name="search_contact">Rechercher un contact</string>
+    <string name="address_contact_List">Liste des adresses</string>
+    <string name="name_contact">Nom complèt: </string>
+    <string name="email_contact">Email: </string>
+    <string name="phone_contact">Téléphone 1: </string>
+    <string name="phone_alt_contact">Téléphone 2: </string>
+    <string name="civility">Les adresses de M/Mme: </string>
+    <string name="note">Note interne: </string>
+    <string name="surname">Sur nom: </string>
+    <string name="save">Sauvegarder </string>
+    <string name="shared_transition">shared_element_container</string>
+    <string name="menu_contacts">Contacts</string>
+    <string name="key_word">Mot clè exemple: teléphone, nom…</string>
+    <string name="enter_address">Veuillez entrer votre email.</string>
+    <string name="enter_valid_email">Veuillez entrer une adresse email valide</string>
+    <string name="enter_password">Veuillez entrer votre mot de passe</string>
+    <string name="enter_phone_1">Veuillez entrer le numéro de téléphone</string>
+    <string name="enter_name">Veuillez entrer le nom</string>
+    <string name="enter_first_name">Veuillez entrer le prénom</string>
+    <string name="enter_phone_length">Le téléphone doit avoir minimun 9 chiffres</string>
+    <string name="enter_quartier">Veuillez entrer le nom</string>
+    <string name="enter_name_address">Veuillez entrer le nom d adresse</string>
+    <string name="_1">1</string>
+    <string name="me">Moi</string>
+    <string name="other">Autre</string>
+    <string name="fullName">Nom et Prénoms</string>
+    <string name="phone_1">Téléphone 1</string>
+    <string name="phone_2">Téléphone 2</string>
+    <string name="next">Continuer</string>
+    <string name="_2">2</string>
+    <string name="sender_contact">Contact de l\'expediteur</string>
+    <string name="receiver_contact">Contact du destinataire</string>
+    <string name="sender">Expéditeur</string>
+    <string name="receiver">Destinataire</string>
+    <string name="product_name">Nom du produit</string>
+    <string name="price">Prix</string>
+    <string name="quantity">Quantité</string>
+    <string name="add_to_list">Ajouter à la liste</string>
+    <string name="textview">textView</string>
+    <string name="delivery">Livraison</string>
+    <string name="create_order">Créer une nouvelle commande</string>
+    <string name="order_list">Liste des commandes</string>
+    <string name="destinataire">Destinataire:</string>
+    <string name="none">Aucun</string>
+    <string name="cart_content">Contenu du panier:</string>
+    <string name="cart">Panier</string>
+    <string name="checkout">Valider le panier</string>
+    <string name="place_order">Passer une commande</string>
+    <string name="quarter">Quartier</string>
+    <string name="sender_address">Adresse de l\'expéditeur</string>
+    <string name="city">Ville</string>
+    <string name="address_description">Description de l\'addresse</string>
+    <string name="geolocation">Adresse géolocalisé</string>
+    <string name="validation">Validation</string>
+    <string name="receiver_address">Adresse du destinataire</string>
+    <string name="_3">3</string>
+    <string name="shipping">Livraison</string>
+    <string name="shipping_price">Prix de livraison</string>
+    <string name="_500_fcfa">500 FCFA</string>
+    <string name="_1000_fcfa">1000 FCFA</string>
+    <string name="_1500_fcfa">1500 FCFA</string>
+    <string name="_2000_fcfa">2000 FCFA</string>
+    <string name="order">Commander</string>
+    <string name="client_contact">Contact du client</string>
+    <string name="client_address">Adresse du client</string>
+    <string name="nom_address">Nom adresse:</string>
+    <string name="address_title">Titre</string>
+    <string name="longitude_address">Longitude:</string>
+    <string name="latitude_address">Latitude:</string>
+    <string name="quartier_address">Quartier:</string>
+    <string name="description_address">Description:</string>
+    <string name="shipping_time">Heure de livraison</string>
+    <string name="contacts">Contacts</string>
+    <string name="contact">Contact</string>
+    <string name="search">Rechercher</string>
+    <string name="enter_new_address">Entrer une nouvelle adresse</string>
+    <string name="new_product">Ajouter un produit</string>
+    <string name="add_to_cart">Ajouter au panier</string>
+    <string name="delete">Supprimer</string>
+    <string name="total_amount">Montant Total:</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="cancel">Annuler</string>
+    <string name="valider">Valider</string>
+    <string name="saving">Enregistrement en cours…</string>
+    <string name="group_delivery">Courses</string>
+    <string name="group_client">Clients</string>
+    <string name="_4">4</string>
+    <string name="import_contact">Importer un contact</string>
+    <string name="address_list">Liste d\'adresses</string>
+    <string name="chose_address">Veuillez choisir une adresse.</string>
+    <string name="close">Fermer</string>
+    <string name="last_name">Nom</string>
+    <string name="first_name">Prénom</string>
+    <string name="contact_info">Informations du contact</string>
+    <string name="contact_address">Adresse du contact</string>
+    <string name="logout">Déconnexion</string>
+    <string name="filter">Filtrer</string>
+    <string name="advanced_search">Filtrage avancé</string>
+    <string name="start_point">Départ</string>
+    <string name="end_point">Arrivé</string>
+    <string name="date">Date</string>
+    <string name="picking">Chargement</string>
+    <string name="enter_quarter">Entrer un quartier</string>
+    <string name="status">Statut</string>
+    <string name="pending">En attente</string>
+    <string name="started">Démarrées</string>
+    <string name="relaunched">Relancées</string>
+    <string name="search_params">Nom ou téléphone</string>
+
+
+    <!-- [START message fonctionnality] : added by marlonne -->
+
+    <!-- start for the client of type receiver   -->
+
+    <string name="before_starting_client_available_title">Avant le départ pour la zone de livraison du client. (client joignable)</string>
+    <string name="before_starting_client_available_msg">Hello, Ici Livraison Express, juste vous informer que nous nous mettons en chemin pour votre livraison!</string>
+
+    <string name="before_starting_client_unavailable_title">Avant le départ pour la zone de livraison du client. (client injoignable)</string>
+    <string name="before_starting_client_unavailable_msg">Hello, Ici Livraison Express. Nous avons sans succès essayé de vous joindre pour votre livraison de ce jour. Merci de nous recontacter une fois disponible. Merci !</string>
+
+    <string name="once_on_delivery_area_client_unavailable_title">Arrivée dans la zone de livraison du client (client injoignable).</string>
+    <string name="once_on_delivery_area_client_unavailable_msg">Hello, Ici Livraison Express, nous nous trouvons actuellement dans votre zone de livraison et vous êtes injoignable, bien vouloir nous recontacter lorsque vous serez disposés à récupérer votre colis.</string>
+
+    <string name="once_on_delivery_area_title_after_waiting_delay_title">Départ de la zone de livraison du client après délais d\'attente.</string>
+    <string name="once_on_delivery_area_msg_after_waiting_delay">Hello, Ici Livraison Express, Pour des contraintes dues au respect de nos délais de livraison, nous nous mettons en routes pour les livraisons suivantes.  Bien vouloir nous recontacter une fois le message reçu svp pour éventuellement reprogrammer votre livraison.</string>
+
+    <string name="on_cancellation_title">Sur annulation de la part du client.</string>
+    <string name="on_cancellation_msg">Hello, ici Livraison Express; suite à votre demande,   votre commande a bien été annulée ! Merci d\’avoir choisi Livraison Express.</string>
+
+    <string name="msg_for_other_purpose_title">Autre raison.</string>
+    <string name="msg_for_other_purpose">  </string>
+
+    <!-- end for the client of type receiver -->
+
+    <!-- start for the client of type receiver  -->
+    <!-- todo : format messages for the sender; it will be used in case we aren't the sender -->
+    <!-- end for the client of type receiver  -->
+
+    <!-- [END message fonctionnality]    -->
+
+    <!--[START map permissions for the mapPickerActivity : added by marlonne] -->
+    <string name="permission_rationale_location">L\'access au service de géolocalisation est requit pour cette page afin de vous situer sur la carte.</string>
+    <string name="location_permission_denied">Cette page requiert votre position Veuillez réessayer et accorder l\'accès pour utiliser la localisation.\n Si l\'autorisation a été définitivement refusée, elle peut être activée à partir des paramètres système > application > livraison express coursier.</string>
+    <string name="permission_required_toast">Votre position est requise pour cette fonctionnalité.</string>
+    <string name="provider_name">livraison-express</string>
+    <string name="no_connexion_detected">Erreur de connexion, verifiez votre connexion !!!</string>
+    <string name="action_filter">Filtrer</string>
+    <string name="order_details_activity_title">Détail de la course</string>
+    <string name="content_details_fragment_title">Contenu</string>
+    <string name="sender_details_fragment_title">Sender</string>
+    <string name="receiver_details_fragment_title">Receiver</string>
+    <string name="client_details_fragment_title">Source</string>
+    <string name="hide_address_block">Moins d\'adresses...</string>
+    <string name="show_address_block">Plus d\'adresses...</string>
+    <string name="address_loading">Chargement d\'adresses...</string>
+    <string name="unable_to_get_your_position">Nous ne parvenons pas a recuperer votre position actuelle!!!</string>
+    <string name="missing_client_coordinates_for_tracking">Nous ne disposons actuellement pas de coordonnées géographiques pour le client pour lequel vous essayer de determiner le chemin, contacter le gestionnaire (ou commercial pour plus d\'informations...)</string>
+    <string name="prohibition_for_unassigned_order_edition">Les courses non assignées ne peuvent faire l\'objet de modification quelconque par un coursier, veuillez contacter le gestionaire !!!</string>
+    <string name="address_dialog_add_address_title">Ajouter une adresse</string>
+    <string name="address_dialog_update_address_title">Modifier l\'adresse</string>
+    <string name="address_title_menu_meeting_point">Point de rencontre</string>
+    <string name="address_title_menu_Building">Immeuble</string>
+    <string name="address_title_menu_office">Bureau</string>
+    <string name="address_title_menu_home">Domicile</string>
+    <string name="missing_latLng_fields_values">Les champs longitude et latitudes doivent être remplis ...</string>
+    <string name="address_record_success">Nouvelle adresse ajoutée avec succes ...</string>
+    <string name="address_record_failure">Nouvelle adresse n\'a pas pu être ajoutée ...</string>
+    <string name="missing_conneixon">Erreur de connexion!!! verifiez que vous êtes connecté ...</string>
+    <string name="updated_successfully">Modification(s) prise(s) en compte ...</string>
+    <string name="something_went_wrong">Une erreur est survenue !!!</string>
+    <string name="continu">Continuer</string>
+    <string name="warning_for_modifying_address">Etes vous sûr(e) de vouloir modifier cet adresse ?</string>
+    <string name="required_field">Ce champ est obligatoire.</string>
+    <string name="map_key">AIzaSyBn_LS3TTqaSsByi5U7poZjoFLB8Egi2Kk</string>
+    <string name="_0">0</string>
+    <string name="contact_detail">Détails du contact</string>
+    <string name="space" />
+    <string name="take_order">Prendre la course</string>
+    <string name="start_order">Demarrer la course</string>
+    <string name="reject_order">Refuser la course</string>
+    <string name="relaunch_order">Mettre la course en relance</string>
+    <string name="deliver_order">Livrer la course</string>
+    <string name="pick_order">Charger la course</string>
+    <string name="other_addresses">Autres adresses</string>
+    <string name="see_more">Voir plus</string>
+    <string name="see_less">Voir moins</string>
+    <string name="detail">Détails</string>
+    <string name="track">Tracer</string>
+    <string name="edit">Modifier</string>
+    <string name="continuer">Continuer</string>
+    <string name="duplicate">Dupliquer</string>
+    <string name="expediteur">Expéditeur:</string>
+    <string name="empty_cart">Panier vide</string>
+    <string name="sent">Envoyée</string>
+    <string name="waiting_connection">En attente de connexion</string>
+    <string name="draft">Brouillon</string>
+    <string name="edit_address">Modifier l\'adresse</string>
+    <string name="add_address">Ajouter une adresse</string>
+    <string name="douala">Douala</string>
+    <string name="yaounde">Yaoundé</string>
+    <string name="house">DOMICILE</string>
+    <string name="work_place">BUREAU</string>
+    <string name="building">IMMEUBLE</string>
+    <string name="meeting_point">POINT DE RENCONTRE</string>
+    <string name="enter_search_pattern">Veuillez entrer un élément de recherche</string>
+    <string name="paid">Déja payée</string>
+    <string name="add_product">Ajouter un produit</string>
+    <string name="warning">Attention!..</string>
+    <string name="oops">Oops!..</string>
+    <string name="prohibited_modification_case_unassigned_order">Les courses non assignées ne peuvent faire l\'objet d\'une modification !</string>
+    <string name="enter_your_message">Entrez votre message…</string>
+    <string name="no_comment_for_order">Aucun Commentaire pour cette course.</string>
+    <string name="assign_to_delivery_man">Assigner a un coursier</string>
+    <string name="delivery_men_list">Liste des Coursiers</string>
+    <string name="empty_delivery_men_list">La liste des coursiers est vide</string>
+    <string name="instruction">instruction…</string>
+    <string name="check_internet_connection">Veuillez vérifier votre connexion internet puis réessayez.</string>
+    <string name="contact_orders_title">Ventes</string>
+    <string name="counter_pending">_</string>
+    <string name="notifications">Notifications</string>
+    <string name="resume">Resumé</string>
+    <string name="un_assign">Non assignée</string>
+    <string name="start">Démarrée</string>
+    <string name="running">En cours de livraison</string>
+    <string name="deliver">Terminée</string>
+    <string name="relaunch">Relancer</string>
+    <string name="destination">Destination</string>
+    <string name="add_intern_order">Ajouter une course interne</string>
+    <string name="no_notifications"><b>Désolé !!! </b>"\n"Nous ne trouvons pas de notification a la date <b>d\'aujourd\'hui</b> …</string>
+    <string name="date_selection_helper">personnaliser votre selection vous pouvez sélectionner une plage</string>
+    <string name="no_order_found"><b>Désolé !!!</b> "\n" mais nous ne trouvons pas de courses pour <b>votre recherche</b> ...</string>
+    <string name="menu_pendind">En attente</string>
+    <string name="menu_started">Démarrée</string>
+    <string name="menu_charged">Chargée</string>
+    <string name="menu_delivered">Livrée</string>
+    <string name="menu_cancelled">Annulée</string>
+    <string name="menu_relaunch">Relancée</string>
+    <string name="menu_none">Tous</string>
+    <string name="order_status_hint">Statut de la course:</string>
+    <string name="my_shops">Mes magasins</string>
+    <string name="error_detail">Détail de l\'erreur</string>
+    <string name="total">Total</string>
+    <string name="settings">Paramètres</string>
+    <string name="_100">100%</string>
+    <string name="week">7 derniers jours</string>
+    <string name="month">30 derniers jours</string>
+    <string name="yesterday">Hier</string>
+    <string name="cash">CASH</string>
+    <string name="orange_money">ORANGE MOMO</string>
+    <string name="mtn_momo">MTN MOMO</string>
+    <string name="paypal">PAYPAL</string>
+    <string name="bank_card">BANK CARD</string>
+    <string name="impay">Impayé</string>
+    <string name="parti_lement_pay">Partièlement payé</string>
+    <string name="pay">Payé</string>
+    <string name="statut_du_paiement">Statut du paiement</string>
+    <string name="mode_de_paiement">Mode de paiement</string>
+    <string name="qui_a_re_u_le_paiment">Qui a reçu le paiment</string>
+    <string name="gestionnaire">GESTIONNAIRE</string>
+    <string name="coursier">COURSIER</string>
+    <string name="partenaire">PARTENAIRE</string>
+    <string name="description">Description</string>
+    <string name="pj">PJ</string>
+    <string name="services">Services</string>
+    <string name="my_contacts">Mes Contacts</string>
+    <string name="attachment_name">Nom de l\'image</string>
+    <string name="clear">Effacer</string>
+    <string name="confirm">Confirmer</string>
+    <string name="order_status">Statut de la commande</string>
+    <string name="shop">MAGASIN</string>
+    <string name="all">Tous</string>
+    <string name="shops_list">Liste des magasins</string>
+    <string name="empty_shops_list">La liste des magasins est vide</string>
+    <string name="menu_to_validate">A Valider</string>
+    <string name="generic_crash_message">Une erreur est survenue lors de l\'utilisation de l\'application. Veuillez redémarrer l\'application.</string>
+    <!--[END map permissions for the mapPickerActivity] -->
+
+
+    <!--[START external modules] -->
+    <string name="group_external_modules">Modules externes</string>
+
+    <!--[START stock module] -->
+    <string name="nav_inventory_management">Gestion de stock</string>
+
+    <string name="group_stock_module">Gestion de stock</string>
+    <string name="menu_stock_search">Recherche</string>
+    <string name="menu_moves">Mouvements</string>
+    <string name="menu_entries">Entrées</string>
+    <string name="menu_outs">Sorties</string>
+    <string name="menu_returns">Retours</string>
+    <string name="menu_warehouse">Sites</string>
+    <string name="menu_inventories">Inventaires</string>
+    <string name="menu_add_move">Ajouter un mouvement</string>
+    <string name="menu_filter_moves">Retrouver un mouvement</string>
+    <string name="menu_close">Fermer</string>
+    <string name="new_entry_moves">Nouvelle entrée</string>
+    <string name="move_details">Détails du mouvement</string>
+
+    <string name="menu_stock_availabilities">Etats de stock</string>
+    <!--[END stock module] -->
+
+    <!--[START fleet module]-->
+    <string name="nav_parking">Parc automobile</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <!--[END fleet module]-->
+
+    <!--[END external modules] -->
+
+</resources>

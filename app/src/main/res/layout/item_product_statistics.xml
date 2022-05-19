@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="product"
+            type="com.israel.livraisonexpresspos.models.ProductStatistic" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/dp_5">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            tools:text="Viramax"
+            android:gravity="center"
+            android:text="@{product.produit}"
+            android:id="@+id/tvProductName" />
+
+        <View
+            android:layout_width="@dimen/dp_10"
+            android:layout_height="0dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            tools:text="21"
+            android:gravity="center"
+            android:text="@{product.quantite}"
+            android:id="@+id/tvProductQuantity" />
+
+        <View
+            android:layout_width="@dimen/dp_10"
+            android:layout_height="0dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            tools:text="25000 FCFA"
+            android:gravity="center"
+            android:text="@{product.achat + ` FCFA`}"
+            android:id="@+id/tvProductPrice" />
+    </LinearLayout>
+</layout>

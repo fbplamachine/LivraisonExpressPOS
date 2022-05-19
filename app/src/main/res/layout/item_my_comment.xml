@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="comment"
+            type="com.israel.livraisonexpresspos.models.Comment" />
+        <import type="android.view.View"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:padding="@dimen/dp_5"
+        android:layout_height="wrap_content">
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/my_comment_border"
+            android:alpha="0.15"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guideline2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/layoutComment"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/layoutComment"
+            android:padding="@dimen/dp_10"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guideline2"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvComment"
+                android:text="@{comment.comment}"
+                android:textColor="@color/grey_90"
+                tools:text="@string/location_not_available_open_settings_message" />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_5"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:id="@+id/tvDate"
+                android:text="@{comment.date}"
+                android:layout_marginHorizontal="@dimen/dp_10"
+                android:visibility="@{comment.fromFirebase ? View.VISIBLE : View.GONE}"
+                android:textSize="10sp"
+                tools:text="2020-12-09 10:30"
+                tools:ignore="SmallSp" />
+            <ImageView
+                android:layout_width="@dimen/dp_16"
+                android:layout_height="@dimen/dp_16"
+                app:srcCompat="@drawable/ic_time"
+                android:visibility="@{comment.fromFirebase ? View.GONE : View.VISIBLE}"
+                android:layout_gravity="end"/>
+        </LinearLayout>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{comment.name}"
+            tools:text="Israel MEKOMOU"
+            android:gravity="end"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/layoutComment"
+            app:layout_constraintStart_toStartOf="@id/layoutComment"
+            app:layout_constraintEnd_toEndOf="@id/layoutComment"/>
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.2" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

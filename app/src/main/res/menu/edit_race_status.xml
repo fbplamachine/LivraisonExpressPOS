@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/prendre"
+        android:visible="false"
+        android:title="@string/take_order" />
+    <item
+        android:id="@+id/demarrer"
+        android:visible="false"
+        android:title="@string/start_order"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/charger"
+        android:visible="false"
+        android:title="@string/pick_order"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/livrer"
+        android:visible="false"
+        android:title="@string/deliver_order"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/relaunch"
+        android:title="@string/relaunch_order"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/refuser"
+        android:title="@string/reject_order"
+        app:showAsAction="never" />
+</menu>

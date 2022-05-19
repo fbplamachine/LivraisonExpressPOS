@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/item_not_paid"
+        android:title="@string/impay"/>
+    <item
+        android:id="@+id/item_semi_paid"
+        android:title="@string/parti_lement_pay"/>
+    <item
+        android:id="@+id/item_paid"
+        android:title="@string/pay"/>
+</menu>

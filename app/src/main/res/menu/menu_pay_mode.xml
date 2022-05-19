@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/item_cash"
+        android:title="@string/cash"/>
+    <item
+        android:id="@+id/item_orange"
+        android:title="@string/orange_money"/>
+    <item
+        android:id="@+id/item_mtn"
+        android:title="@string/mtn_momo"/>
+    <item
+        android:id="@+id/item_paypal"
+        android:title="@string/paypal"/>
+    <item
+        android:id="@+id/item_card"
+        android:title="@string/bank_card"/>
+</menu>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/itemNone" android:title="@string/menu_none"/>
+    <item android:id="@+id/itemToValidate" android:title="@string/menu_to_validate"/>
+    <item android:id="@+id/itemUnassigned" android:title="@string/menu_unassigned"/>
+    <item android:id="@+id/itemPending" android:title="@string/menu_pendind"/>
+    <item android:id="@+id/itemStarted" android:title="@string/menu_started"/>
+    <item android:id="@+id/itemPicked" android:title="@string/menu_charged"/>
+    <item android:id="@+id/itemDelivered" android:title="@string/menu_delivered"/>
+    <item android:id="@+id/itemRelaunch" android:title="@string/menu_relaunch"/>
+    <item android:id="@+id/itemCancelled" android:title="@string/menu_cancelled"/>
+</menu>

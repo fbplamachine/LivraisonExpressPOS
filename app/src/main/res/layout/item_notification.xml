@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="notification"
+            type="com.israel.livraisonexpresspos.models.Notification" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_20"
+        android:gravity="center_vertical"
+        android:foreground="?attr/selectableItemBackground"
+        android:orientation="horizontal">
+        <FrameLayout
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:alpha="0.7"
+            android:background="@drawable/bg_round_blue">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_os_notification_fallback_white_24dp"/>
+        </FrameLayout>
+        <View
+            android:layout_width="@dimen/dp_10"
+            android:layout_height="0dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:text="@{notification.user_cause.fullname}"
+                    android:textColor="@color/grey_90"
+                    android:textSize="@dimen/sp_16"
+                    tools:text="Israel MEKOMOU"/>
+                <View
+                    android:layout_width="@dimen/dp_10"
+                    android:layout_height="0dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="11sp"
+                    android:text="@{notification.notification_created_at}"
+                    android:textColor="@color/grey_40"
+                    tools:text="2021-07-09 12:24:00"
+                    tools:ignore="SmallSp" />
+            </LinearLayout>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_4"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{notification.message}"
+                tools:text="La course a été livré mais le client n'est pas satisfait."/>
+        </LinearLayout>
+    </LinearLayout>
+
+</layout>

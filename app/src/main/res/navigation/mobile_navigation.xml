@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_unassigned">
+
+    <fragment
+        android:id="@+id/nav_unassigned"
+        android:name="com.israel.livraisonexpresspos.ui.orders.UnassignedFragment"
+        android:label="@string/menu_unassigned"
+        tools:layout="@layout/fragment_order" />
+
+    <fragment
+        android:id="@+id/nav_today"
+        android:name="com.israel.livraisonexpresspos.ui.orders.TodayFragment"
+        android:label="@string/menu_today"
+        tools:layout="@layout/fragment_order" />
+
+    <fragment
+        android:id="@+id/nav_cancel"
+        android:name="com.israel.livraisonexpresspos.ui.orders.CancelledFragment"
+        android:label="@string/menu_cancelled"
+        tools:layout="@layout/fragment_order" />
+
+    <fragment
+        android:id="@+id/nav_to_validate"
+        android:name="com.israel.livraisonexpresspos.ui.orders.ToValidateFragment"
+        android:label="@string/menu_to_validate"
+        tools:layout="@layout/fragment_order" />
+
+    <fragment
+        android:id="@+id/nav_my_orders"
+        android:name="com.israel.livraisonexpresspos.ui.orders.MyOrdersFragment"
+        android:label="@string/menu_my_orders"
+        tools:layout="@layout/fragment_order" />
+
+    <fragment
+        android:id="@+id/nav_to_be_treated"
+        android:name="com.israel.livraisonexpresspos.ui.orders.ToBeTreatedFragment"
+        android:label="@string/menu_to_be_treated"
+        tools:layout="@layout/fragment_order" />
+
+    <fragment
+        android:id="@+id/nav_place_order"
+        android:name="com.israel.livraisonexpresspos.ui.place_order.PlaceOrderFragment"
+        android:label="@string/menu_place_order"
+        tools:layout="@layout/fragment_place_order" />
+
+    <fragment
+        android:id="@+id/nav_client"
+        android:name="com.israel.livraisonexpresspos.ui.contacts.ContactFragment"
+        android:label="@string/menu_contacts"
+        tools:layout="@layout/fragment_contact" />
+    <fragment
+        android:id="@+id/nav_filter"
+        android:name="com.israel.livraisonexpresspos.ui.filter.FilterResultFragment"
+        android:label="Recherche "
+        tools:layout="@layout/fragment_filter_form" />
+    <fragment
+        android:id="@+id/nav_my_shops"
+        android:name="com.israel.livraisonexpresspos.ui.my_shops.MyShopsFragment"
+        android:label="@string/my_shops"
+        tools:layout="@layout/fragment_my_shops" />
+    <fragment
+        android:id="@+id/nav_stat_delivery_men"
+        android:name="com.israel.livraisonexpresspos.ui.statistics.delivery_men.DeliveryMenStatisticsFragment"
+        android:label="Statistique Coursier"
+        tools:layout="@layout/activity_shop_statistic" />
+    <fragment
+        android:id="@+id/nav_stat_sales"
+        android:name="com.israel.livraisonexpresspos.ui.my_shops.MyShopsFragment"
+        android:label="Ventes"
+        tools:layout="@layout/activity_sale_statistics" />
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="com.israel.livraisonexpresspos.ui.settings.SettingsFragment"
+        android:label="@string/settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/nav_my_contacts"
+        android:name="com.israel.livraisonexpresspos.ui.my_contacts.MyContactsFragment"
+        android:label="@string/my_contacts"
+        tools:layout="@layout/fragment_my_contacts" />
+
+
+</navigation>

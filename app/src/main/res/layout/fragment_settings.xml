@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/layoutCitySettings">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:text="Paramètre de ville"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="@dimen/dp_16"
+                    android:background="@color/overlay_dark_10"
+                    android:textSize="@dimen/sp_16"
+                    android:textColor="@color/grey_80"/>
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Douala"
+                    android:textColor="@color/grey_80"
+                    android:paddingHorizontal="@dimen/dp_8"
+                    android:checked="true"
+                    android:id="@+id/switchDouala"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_1"
+                    android:background="@color/overlay_dark_10"/>
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Yaoundé"
+                    android:textColor="@color/grey_80"
+                    android:paddingHorizontal="@dimen/dp_8"
+                    android:checked="true"
+                    android:id="@+id/switchYaounde"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:text="Paramètre de notification"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="@dimen/dp_16"
+                android:background="@color/overlay_dark_10"
+                android:textSize="@dimen/sp_16"
+                android:textColor="@color/grey_80"/>
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Recevoir les notifications"
+                android:textColor="@color/grey_80"
+                android:paddingHorizontal="@dimen/dp_8"
+                android:checked="true"
+                android:id="@+id/switchNotification"/>
+        </LinearLayout>
+    </ScrollView>
+</layout>

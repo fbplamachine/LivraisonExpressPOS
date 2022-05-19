@@ -1,0 +1,183 @@
+buildscript {
+    repositories {
+        maven { url 'https://plugins.gradle.org/m2/'}
+    }
+    dependencies {
+        classpath 'gradle.plugin.com.onesignal:onesignal-gradle-plugin:[0.12.9, 0.99.99]'
+    }
+}
+apply plugin: 'com.onesignal.androidsdk.onesignal-gradle-plugin'
+
+repositories {
+    maven { url 'https://maven.google.com' }
+}
+
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+configurations {
+    cleanedAnnotations
+    compile.exclude group: 'org.jetbrains' , module:'annotations'
+}
+
+def getProps(path) {
+    Properties props = new Properties()
+    props.load(new FileInputStream(file(path)))
+    return props
+}
+
+def keystoreProperties = new Properties()
+def keystorePropertiesFile = rootProject.file('./app/config/key.properties')
+if (keystorePropertiesFile.exists()) {
+    keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+}
+
+// To restrict developer to generate release build using Development URL,
+
+android.variantFilter { variant ->
+    if (variant.buildType.name == 'release'
+            && (variant.getFlavors().get(0).name == 'development'
+            || variant.getFlavors().get(0).name == 'preprod')) {
+        variant.setIgnore(true)
+    }
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "29.0.3"
+
+    signingConfigs{
+        release{
+            keyAlias keystoreProperties['keyAlias']
+            keyPassword keystoreProperties['keyPassword']
+            storeFile file(keystoreProperties['storeFile'])
+            storePassword keystoreProperties['storePassword']
+        }
+    }
+
+    defaultConfig {
+        applicationId "com.israel.livraisonexpresspos"
+        minSdkVersion 23
+        targetSdkVersion 30
+        versionCode 5
+        versionName "1.2.2"
+        vectorDrawables.useSupportLibrary = true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        manifestPlaceholders = [
+//                onesignal_app_id: '69d2bec4-3f89-40b2-a43d-ef28ec341eb3',//test
+//                onesignal_app_id: '60da4108-44d0-4334-a1e4-b8f494e1c060',//preprod
+                onesignal_app_id: '22a01736-0227-4b90-b484-45a0c65aac89',//prod
+                onesignal_google_project_number: 'REMOTE'
+        ]
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    buildFeatures{
+        dataBinding true
+        viewBinding true
+    }
+
+    flavorDimensions "version"
+    productFlavors {
+        development {
+            dimension "version"
+            versionNameSuffix "-dev"
+            getProps('./config/env/dev.properties').each { p ->
+                buildConfigField 'String', p.key, p.value
+            }
+        }
+        preprod{
+            dimension "version"
+            versionNameSuffix "-preprod"
+            getProps('./config/env/preprod.properties').each { p ->
+                buildConfigField 'String', p.key, p.value
+            }
+        }
+        production {
+            dimension "version"
+            getProps('./config/env/prod.properties').each { p ->
+                buildConfigField 'String', p.key, p.value
+            }
+        }
+    }
+
+    dexOptions {
+        javaMaxHeapSize="4g"
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.2'
+    implementation 'androidx.navigation:navigation-fragment:2.3.0'
+    implementation 'androidx.navigation:navigation-ui:2.3.0'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation 'com.google.android.gms:play-services-location:17.1.0'
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    implementation platform('com.google.firebase:firebase-bom:27.1.0')
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-database'
+
+    implementation 'com.onesignal:OneSignal:[3.15.4, 3.99.99]'
+
+    /*********************MATERIAL DESIGN*************************************/
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'com.github.andremion:counterfab:1.2.2'
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+
+    /*********************RETROFIT LIBS*************************************/
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.10.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+    implementation 'com.squareup.retrofit2:converter-scalars:2.1.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
+    implementation 'com.squareup.okhttp:okhttp-urlconnection:2.0.0'
+    implementation 'org.jetbrains:annotations-java5:15.0'
+
+    /*********************IMAGE LOADER**************************************/
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+
+    // Room components
+    implementation "android.arch.persistence.room:runtime:$rootProject.roomVersion"
+    annotationProcessor "android.arch.persistence.room:compiler:$rootProject.roomVersion"
+    androidTestImplementation "android.arch.persistence.room:testing:$rootProject.roomVersion"
+
+    // Lifecycle components
+    implementation "android.arch.lifecycle:extensions:$rootProject.archLifecycleVersion"
+    annotationProcessor "android.arch.lifecycle:compiler:$rootProject.archLifecycleVersion"
+
+    /********************** expandable layout *******************************/
+    implementation 'com.ms-square:expandableTextView:0.1.4'
+    /********************** Bugsang *****************************************/
+    implementation("com.bugsnag:bugsnag-android:4.22.3") {
+        exclude group: 'org.jetbrains', module: 'annotations'
+    }
+    /********************** maps ********************************************/
+    implementation 'com.google.android.libraries.places:places:2.3.0'
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    implementation 'com.google.android.gms:play-services-places:17.0.0'
+    implementation 'com.google.android.gms:play-services-location:17.0.0'
+
+    /********************** Toasty ******************************************/
+    implementation 'com.github.GrenderG:Toasty:1.3.0'
+
+    /********************* graphs *********************************************/
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.7'
+}

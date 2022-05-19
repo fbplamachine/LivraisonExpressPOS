@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="badge"
+            type="com.israel.livraisonexpresspos.models.from_steed_app.Badge" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey_5"
+        tools:context=".ui.statistics.shop.ShopStatisticActivity">
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:id="@+id/toolbar2"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@color/colorPrimary"
+            app:navigationIcon="@drawable/ic_arrow_back_white_24"
+            app:titleTextColor="@color/white"
+            app:menu="@menu/menu_filter"/>
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            app:layout_constraintTop_toBottomOf="@id/toolbar2"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/layoutDateSelected"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="@dimen/dp_20"
+                    android:gravity="center"
+                    app:layout_constraintTop_toTopOf="parent">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvTopic"
+                        android:textSize="@dimen/sp_30"
+                        android:textColor="@color/colorAccent"
+                        android:textStyle="bold"
+                        tools:text="Aujourd'hui"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvDates"
+                        android:textAlignment="center"
+                        tools:text="Statistiques pour la journée du 09/03/2021"/>
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp_20"
+                    app:cardCornerRadius="@dimen/dp_20"
+                    android:id="@+id/cvStatistics"
+                    app:layout_constraintTop_toBottomOf="@id/layoutDateSelected">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="@dimen/dp_10"
+                                android:id="@+id/layoutTotal"
+                                android:onClick="getOrders"
+                                android:gravity="center">
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <ProgressBar
+                                        style="?android:attr/progressBarStyleHorizontal"
+                                        android:layout_width="@dimen/dp_50"
+                                        android:layout_height="@dimen/dp_50"
+                                        android:layout_centerInParent="true"
+                                        android:background="@drawable/circular_shape"
+                                        android:indeterminate="false"
+                                        android:max="100"
+                                        android:id="@+id/progressTotal"
+                                        android:progress="100"
+                                        android:progressDrawable="@drawable/circular_progress_bar"
+                                        android:progressTint="@color/overlay_dark_50"
+                                        android:secondaryProgress="0" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:textSize="@dimen/sp_12"
+                                        android:text="@string/_100"
+                                        tools:text="100%" />
+                                </RelativeLayout>
+                                <View
+                                    android:layout_width="0dp"
+                                    android:layout_height="@dimen/dp_10"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/total"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{`(` + String.valueOf(badge.total) + `)`}"
+                                    tools:text="(100)"/>
+                            </LinearLayout>
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/overlay_dark_10"/>
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="@dimen/dp_10"
+                                android:id="@+id/layoutUnassigned"
+                                android:onClick="getOrders"
+                                android:gravity="center">
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <ProgressBar
+                                        style="?android:attr/progressBarStyleHorizontal"
+                                        android:layout_width="@dimen/dp_50"
+                                        android:layout_height="@dimen/dp_50"
+                                        android:layout_centerInParent="true"
+                                        android:background="@drawable/circular_shape"
+                                        android:indeterminate="false"
+                                        tools:max="100"
+                                        tools:progress="1"
+                                        android:max="@{badge.total}"
+                                        android:progress="@{badge.unassigned}"
+                                        android:progressDrawable="@drawable/circular_progress_bar"
+                                        android:progressTint="@color/non_assignee"
+                                        android:secondaryProgress="0"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:id="@+id/tvUnnassigned"
+                                        android:textSize="@dimen/sp_12"
+                                        tools:text="1%" />
+                                </RelativeLayout>
+                                <View
+                                    android:layout_width="0dp"
+                                    android:layout_height="@dimen/dp_10"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/un_assign"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{`(` + String.valueOf(badge.unassigned) + `/` + String.valueOf(badge.total) + `)`}"
+                                    tools:text="(1/100)"/>
+                            </LinearLayout>
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/overlay_dark_10"/>
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="@dimen/dp_10"
+                                android:id="@+id/layoutAssigned"
+                                android:onClick="getOrders"
+                                android:gravity="center">
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <ProgressBar
+                                        style="?android:attr/progressBarStyleHorizontal"
+                                        android:layout_width="@dimen/dp_50"
+                                        android:layout_height="@dimen/dp_50"
+                                        android:layout_centerInParent="true"
+                                        android:background="@drawable/circular_shape"
+                                        android:indeterminate="false"
+                                        tools:max="100"
+                                        tools:progress="5"
+                                        android:max="@{badge.total}"
+                                        android:progress="@{badge.assigned}"
+                                        android:progressDrawable="@drawable/circular_progress_bar"
+                                        android:progressTint="@color/en_attente"
+                                        android:secondaryProgress="0" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:textSize="@dimen/sp_12"
+                                        android:id="@+id/tvAssigned"
+                                        tools:text="5%" />
+                                </RelativeLayout>
+                                <View
+                                    android:layout_width="0dp"
+                                    android:layout_height="@dimen/dp_10"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/pending"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{`(` + String.valueOf(badge.assigned) + `/` + String.valueOf(badge.total) + `)`}"
+                                    tools:text="(5/100)"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/overlay_dark_10"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="@dimen/dp_10"
+                                android:id="@+id/layoutRunning"
+                                android:onClick="getOrders"
+                                android:gravity="center">
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <ProgressBar
+                                        style="?android:attr/progressBarStyleHorizontal"
+                                        android:layout_width="@dimen/dp_50"
+                                        android:layout_height="@dimen/dp_50"
+                                        android:layout_centerInParent="true"
+                                        android:background="@drawable/circular_shape"
+                                        android:indeterminate="false"
+                                        tools:max="100"
+                                        tools:progress="4"
+                                        android:max="@{badge.total}"
+                                        android:progress="@{badge.running}"
+                                        android:progressDrawable="@drawable/circular_progress_bar"
+                                        android:progressTint="@color/en_cours"
+                                        android:secondaryProgress="0" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:textSize="@dimen/sp_12"
+                                        android:id="@+id/tvRunning"
+                                        tools:text="4%" />
+                                </RelativeLayout>
+                                <View
+                                    android:layout_width="0dp"
+                                    android:layout_height="@dimen/dp_10"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/menu_ongoing"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{`(` + String.valueOf(badge.running) + `/` + String.valueOf(badge.total) + `)`}"
+                                    tools:text="(4/100)"/>
+                            </LinearLayout>
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/overlay_dark_10"/>
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:id="@+id/layoutDelivered"
+                                android:onClick="getOrders"
+                                android:padding="@dimen/dp_10"
+                                android:gravity="center">
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <ProgressBar
+                                        style="?android:attr/progressBarStyleHorizontal"
+                                        android:layout_width="@dimen/dp_50"
+                                        android:layout_height="@dimen/dp_50"
+                                        android:layout_centerInParent="true"
+                                        android:background="@drawable/circular_shape"
+                                        android:indeterminate="false"
+                                        tools:max="100"
+                                        tools:progress="70"
+                                        android:max="@{badge.total}"
+                                        android:progress="@{badge.delivered}"
+                                        android:progressDrawable="@drawable/circular_progress_bar"
+                                        android:progressTint="@color/terminee"
+                                        android:secondaryProgress="0" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:textSize="@dimen/sp_12"
+                                        android:id="@+id/tvDelivered"
+                                        tools:text="70%" />
+                                </RelativeLayout>
+                                <View
+                                    android:layout_width="0dp"
+                                    android:layout_height="@dimen/dp_10"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/menu_delivered"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{`(` + String.valueOf(badge.delivered) + `/` + String.valueOf(badge.total) + `)`}"
+                                    tools:text="(70/100)"/>
+                            </LinearLayout>
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/overlay_dark_10"/>
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:id="@+id/layoutCancel"
+                                android:onClick="getOrders"
+                                android:padding="@dimen/dp_10"
+                                android:gravity="center">
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <ProgressBar
+                                        style="?android:attr/progressBarStyleHorizontal"
+                                        android:layout_width="@dimen/dp_50"
+                                        android:layout_height="@dimen/dp_50"
+                                        android:layout_centerInParent="true"
+                                        android:background="@drawable/circular_shape"
+                                        android:indeterminate="false"
+                                        tools:max="100"
+                                        tools:progress="20"
+                                        android:max="@{badge.total}"
+                                        android:progress="@{badge.cancelled}"
+                                        android:progressDrawable="@drawable/circular_progress_bar"
+                                        android:progressTint="@color/error_red"
+                                        android:alpha="0.7"
+                                        android:secondaryProgress="0" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:textSize="@dimen/sp_12"
+                                        android:id="@+id/tvCancel"
+                                        tools:text="20%" />
+                                </RelativeLayout>
+                                <View
+                                    android:layout_width="0dp"
+                                    android:layout_height="@dimen/dp_10"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/menu_cancelled"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{`(` + String.valueOf(badge.cancelled) + `/` + String.valueOf(badge.total) + `)`}"
+                                    tools:text="(20/100)"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvCourse"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    app:layout_constraintTop_toBottomOf="@id/cvStatistics"
+                    android:layout_marginTop="@dimen/dp_20"
+                    tools:listitem="@layout/item_course" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

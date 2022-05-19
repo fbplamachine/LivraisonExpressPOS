@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/start_it"
+        android:title="Demarrer" />
+
+    <item
+        android:id="@+id/rejet_it"
+        android:title="Rejeter" />
+    <item
+        android:id="@+id/traker_it"
+        android:title="Tracer" />
+
+</menu>

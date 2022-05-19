@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/home"
+        android:title="@string/house"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/office"
+        android:title="@string/work_place"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/building"
+        android:title="@string/building"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/meeting_point"
+        android:title="@string/meeting_point"
+        app:showAsAction="never" />
+</menu>

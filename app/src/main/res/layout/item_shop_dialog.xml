@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="shop"
+            type="com.israel.livraisonexpresspos.models.Shop" />
+    </data>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:foreground="?attr/selectableItemBackground"
+        android:padding="@dimen/dp_20">
+        <ImageView
+            android:layout_width="@dimen/dp_24"
+            android:layout_height="@dimen/dp_24"
+            android:src="@drawable/ic_baseline_business_24"
+            app:tint="@color/grey_60" />
+        <View
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="0dp"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            tools:text="ALEX AROMA DOUALA"
+            android:textAllCaps="true"
+            android:text="@{shop.nom}"
+            style="@style/TextAppearance.AppCompat.Subhead"/>
+    </LinearLayout>
+</layout>

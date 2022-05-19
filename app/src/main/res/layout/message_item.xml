@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="5dp"
+    android:background="#101010"
+    android:layout_marginBottom="5dp"
+    android:layout_marginTop="5dp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_margin="10dp">
+
+        <LinearLayout
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:background="@drawable/message_index">
+
+            <TextView
+                android:id="@+id/tv_message_index"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="message index"
+                android:text="2"
+                android:textSize="30sp"
+                android:gravity="center"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="10"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:layout_gravity="center">
+
+            <TextView
+                android:id="@+id/tv_message_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:hint="titre du message "
+                android:textSize="15dp"
+                android:textStyle="bold"/>
+
+            <com.ms.square.android.expandabletextview.ExpandableTextView
+                android:id="@+id/expandable_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:maxCollapsedLines="1"
+                app:animDuration="200">
+
+                <TextView
+                    android:id = "@+id/expandable_text"
+                    android:layout_width = "wrap_content"
+                    android:layout_height = "wrap_content"
+                    android:text = "Hello World!"
+                    app:layout_constraintBottom_toBottomOf = "parent"
+                    app:layout_constraintLeft_toLeftOf = "parent"
+                    app:layout_constraintRight_toRightOf = "parent"
+                    app:layout_constraintTop_toTopOf = "parent" />
+
+                <ImageButton
+                    android:id="@+id/expand_collapse"
+                    android:layout_width="40dp"
+                    android:padding="16dp"
+                    android:background="@android:color/transparent"
+                    android:layout_height="30dp"
+                    android:layout_gravity="left|bottom"/>
+
+            </com.ms.square.android.expandabletextview.ExpandableTextView>
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_message_sender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="@dimen/cardview_default_elevation"
+            android:layout_margin="5dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:foregroundGravity="right"
+                android:src="@drawable/ic_baseline_send_24"
+                android:padding="5dp"
+                app:tint="#555" />
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

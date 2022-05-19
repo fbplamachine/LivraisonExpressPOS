@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="@dimen/dp_35"
+                android:layout_height="@dimen/dp_35"
+                android:id="@+id/stepShipping"
+                android:background="@drawable/bg_round_blue"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_3"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="@dimen/dp_2"
+                android:layout_height="match_parent"
+                android:minHeight="?attr/actionBarSize"
+                android:background="@color/grey_10" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="@dimen/dp_15"
+            android:layout_height="0dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_35"
+                android:layout_marginHorizontal="@dimen/dp_5"
+                android:onClick="onTitleClick"
+                android:text="@string/shipping"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/grey_90"
+                android:gravity="center_vertical"
+                android:id="@+id/tvShippingTitle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/layoutShipping"
+                android:orientation="vertical"
+                android:layout_marginBottom="@dimen/dp_15">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorAccent"
+                    android:text="@string/shipping_time" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp_10" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dp_10"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="02-11-2020 12:00"
+                        android:id="@+id/tvShippingTime"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                        android:textColor="@color/grey_80" />
+
+                    <View
+                        android:layout_width="@dimen/dp_20"
+                        android:layout_height="0dp" />
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_round_edit_24"
+                        android:background="@color/transparent"
+                        android:tint="@color/grey_60"
+                        android:scaleType="centerCrop"
+                        android:id="@+id/ibEditTime" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp_20" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/shipping_price" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp_10" />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:singleSelection="true"
+                    android:id="@+id/groupShippingPrice">
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:checked="true"
+                        style="@style/Widget.MaterialComponents.Chip.Filter"
+                        android:text="@string/_500_fcfa"
+                        android:id="@+id/chip500"
+                        app:checkedIconTint="@color/white"
+                        app:chipBackgroundColor="@color/colorAccent" />
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        style="@style/Widget.MaterialComponents.Chip.Filter"
+                        android:text="@string/_1000_fcfa"
+                        android:id="@+id/chip1000"
+                        app:checkedIconTint="@color/white"
+                        app:chipBackgroundColor="@color/colorAccent" />
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="@string/_1500_fcfa"
+                        style="@style/Widget.MaterialComponents.Chip.Filter"
+                        android:id="@+id/chip1500"
+                        app:checkedIconTint="@color/white"
+                        app:chipBackgroundColor="@color/colorAccent" />
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="@string/_2000_fcfa"
+                        style="@style/Widget.MaterialComponents.Chip.Filter"
+                        android:id="@+id/chip2000"
+                        app:checkedIconTint="@color/white"
+                        app:chipBackgroundColor="@color/colorAccent" />
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        style="@style/Widget.MaterialComponents.Chip.Filter"
+                        android:text="@string/other"
+                        android:id="@+id/chipOther"
+                        app:checkedIconTint="@color/white"
+                        app:chipBackgroundColor="@color/colorAccent" />
+                </com.google.android.material.chip.ChipGroup>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp_10" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tilPrice"
+                    android:visibility="gone"
+                    android:hint="@string/shipping_price">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:id="@+id/etPrice" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <View
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="@dimen/dp_10"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorAccent"
+                    android:text="@string/statut_du_paiement"/>
+                <TextView
+                    android:id="@+id/tvPayState"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/impay"
+                    android:textColor="@color/grey_80"
+                    android:textAllCaps="true"
+                    android:textSize="18sp"
+                    app:drawableEndCompat="@drawable/ic_arrow_drop_down"/>
+                <LinearLayout
+                    android:id="@+id/layoutPayDetail"
+                    android:layout_width="match_parent"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <View
+                        android:layout_width="@dimen/dp_0"
+                        android:layout_height="@dimen/dp_10"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/mode_de_paiement"/>
+                    <TextView
+                        android:id="@+id/tvPayMode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/cash"
+                        android:textAllCaps="true"
+                        android:textColor="@color/grey_80"
+                        android:textSize="18sp"
+                        app:drawableEndCompat="@drawable/ic_arrow_drop_down"/>
+                    <View
+                        android:layout_width="@dimen/dp_0"
+                        android:layout_height="@dimen/dp_10"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/qui_a_re_u_le_paiment"/>
+                    <TextView
+                        android:id="@+id/tvCashierRole"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/gestionnaire"
+                        android:textAllCaps="true"
+                        android:textColor="@color/grey_80"
+                        android:textSize="18sp"
+                        app:drawableEndCompat="@drawable/ic_arrow_drop_down"/>
+                    <View
+                        android:layout_width="@dimen/dp_0"
+                        android:layout_height="@dimen/dp_10"/>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/description">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textMultiLine"
+                            android:id="@+id/etDescription"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+                <View
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="@dimen/dp_20"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorAccent"
+                    android:text="@string/order_status"/>
+                <TextView
+                    android:id="@+id/tvOrderState"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/un_assign"
+                    android:textColor="@color/grey_80"
+                    android:textAllCaps="true"
+                    android:textSize="18sp"
+                    app:drawableEndCompat="@drawable/ic_arrow_drop_down"/>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp_10"/>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilDeliveryMan"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/coursier">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/etDeliveryMan"
+                        android:focusable="false"/>
+                </com.google.android.material.textfield.TextInputLayout>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp_20" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_70"
+                    android:text="@string/order"
+                    android:id="@+id/buttonOrder"
+                    android:onClick="onButtonClick" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

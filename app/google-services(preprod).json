@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "733611067265",
+    "firebase_url": "https://livraison-express-staging.firebaseio.com",
+    "project_id": "livraison-express-staging",
+    "storage_bucket": "livraison-express-staging.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:733611067265:android:676b605ef518a668d2ca80",
+        "android_client_info": {
+          "package_name": "com.israel.livraisonexpresspos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "733611067265-8fr03oqhdiftm7tf53gqudelotfbutcg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD0VuAH44sYXAEoXv5kg5aMwfyouPx2rFs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "733611067265-8fr03oqhdiftm7tf53gqudelotfbutcg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:733611067265:android:4009689888bb0ac8d2ca80",
+        "android_client_info": {
+          "package_name": "com.mcs.livraison_express"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "733611067265-8fr03oqhdiftm7tf53gqudelotfbutcg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD0VuAH44sYXAEoXv5kg5aMwfyouPx2rFs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "733611067265-8fr03oqhdiftm7tf53gqudelotfbutcg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

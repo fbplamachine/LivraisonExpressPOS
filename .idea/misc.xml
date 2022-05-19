@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="../../../../../../layout/custom_preview.xml" value="0.36018518518518516" />
+        <entry key="..\:/Users/mcs/Desktop/projects/mcs/LivrexPos/app/src/main/res/drawable/active_tab.xml" value="0.2703125" />
+        <entry key="..\:/Users/mcs/Desktop/projects/mcs/LivrexPos/app/src/main/res/drawable/bottom_sheet_bg.xml" value="0.2703125" />
+        <entry key="..\:/Users/mcs/Desktop/projects/mcs/LivrexPos/app/src/main/res/drawable/bottom_sheet_header.xml" value="0.2703125" />
+        <entry key="..\:/Users/mcs/Desktop/projects/mcs/LivrexPos/app/src/main/res/drawable/circular_progress_bar.xml" value="0.1935185185185185" />
+        <entry key="..\:/Users/mcs/Desktop/projects/mcs/LivrexPos/app/src/main/res/drawable/corner_radius_3.xml" value="0.2703125" />
+        <entry key="..\:/Users/mcs/Desktop/projects/mcs/LivrexPos/app/src/main/res/drawable/filter_input.xml" value="0.2703125" />
+        <entry key="..\:/Users/mcs/Desktop/projects/mcs/LivrexPos/app/src/main/res/drawable/stock_product_resume.xml" value="0.2703125" />
+        <entry key="..\:/Users/mcs/Desktop/projects/mcs/LivrexPos/app/src/main/res/drawable/tv_item_status.xml" value="0.2703125" />
+        <entry key="..\:/Users/mcs/Desktop/projects/mcs/LivrexPos/app/src/main/res/layout/activity_checkout.xml" value="0.22644927536231885" />
+        <entry key="..\:/Users/mcs/Desktop/projects/mcs/LivrexPos/app/src/main/res/layout/activity_main.xml" value="0.2542991141219385" />
+        <entry key="..\:/Users/mcs/Desktop/projects/mcs/LivrexPos/app/src/main/res/layout/activity_module.xml" value="0.22780797101449277" />
+        <entry key="..\:/Users/mcs/Desktop/projects/mcs/LivrexPos/app/src/main/res/layout/activity_move_details.xml" value="0.23731884057971014" />
+        <entry key="..\:/Users/mcs/Desktop/projects/mcs/LivrexPos/app/src/main/res/layout/activity_splash.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/mcs/Desktop/projects/mcs/LivrexPos/app/src/main/res/layout/activity_stock_inventory.xml" value="0.22644927536231885" />
+        <entry key="..\:/Users/mcs/Desktop/projects/mcs/LivrexPos/app/src/main/res/layout/app_bar_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/mcs/Desktop/projects/mcs/LivrexPos/app/src/main/res/layout/content_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/mcs/Desktop/projects/mcs/LivrexPos/app/src/main/res/layout/dialog_add_ware_house.xml" value="0.264" />
+        <entry key="..\:/Users/mcs/Desktop/projects/mcs/LivrexPos/app/src/main/res/layout/dialog_shop.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/mcs/Desktop/projects/mcs/LivrexPos/app/src/main/res/layout/fragment_add_move.xml" value="0.4" />
+        <entry key="..\:/Users/mcs/Desktop/projects/mcs/LivrexPos/app/src/main/res/layout/fragment_contact.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/mcs/Desktop/projects/mcs/LivrexPos/app/src/main/res/layout/fragment_contact_detail.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/mcs/Desktop/projects/mcs/LivrexPos/app/src/main/res/layout/fragment_delivery_men.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/mcs/Desktop/projects/mcs/LivrexPos/app/src/main/res/layout/fragment_entry.xml" value="0.2" />
+        <entry key="..\:/Users/mcs/Desktop/projects/mcs/LivrexPos/app/src/main/res/layout/fragment_exit.xml" value="0.264" />
+        <entry key="..\:/Users/mcs/Desktop/projects/mcs/LivrexPos/app/src/main/res/layout/fragment_filter.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/mcs/Desktop/projects/mcs/LivrexPos/app/src/main/res/layout/fragment_inventory.xml" value="0.22644927536231885" />
+        <entry key="..\:/Users/mcs/Desktop/projects/mcs/LivrexPos/app/src/main/res/layout/fragment_move_details.xml" value="0.264" />
+        <entry key="..\:/Users/mcs/Desktop/projects/mcs/LivrexPos/app/src/main/res/layout/fragment_move_filter.xml" value="0.4" />
+        <entry key="..\:/Users/mcs/Desktop/projects/mcs/LivrexPos/app/src/main/res/layout/fragment_nav_stock_home.xml" value="0.2006340579710145" />
+        <entry key="..\:/Users/mcs/Desktop/projects/mcs/LivrexPos/app/src/main/res/layout/fragment_order.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/mcs/Desktop/projects/mcs/LivrexPos/app/src/main/res/layout/fragment_place_order.xml" value="0.18432971014492755" />
+        <entry key="..\:/Users/mcs/Desktop/projects/mcs/LivrexPos/app/src/main/res/layout/fragment_return.xml" value="0.176" />
+        <entry key="..\:/Users/mcs/Desktop/projects/mcs/LivrexPos/app/src/main/res/layout/fragment_settings.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/mcs/Desktop/projects/mcs/LivrexPos/app/src/main/res/layout/fragment_stock_delivery_men.xml" value="0.2217741935483871" />
+        <entry key="..\:/Users/mcs/Desktop/projects/mcs/LivrexPos/app/src/main/res/layout/fragment_stock_home.xml" value="0.22644927536231885" />
+        <entry key="..\:/Users/mcs/Desktop/projects/mcs/LivrexPos/app/src/main/res/layout/fragment_stock_search.xml" value="0.264" />
+        <entry key="..\:/Users/mcs/Desktop/projects/mcs/LivrexPos/app/src/main/res/layout/fragment_stock_shops.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/mcs/Desktop/projects/mcs/LivrexPos/app/src/main/res/layout/fragment_stock_ware_house.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/mcs/Desktop/projects/mcs/LivrexPos/app/src/main/res/layout/fragment_ware_house.xml" value="0.4" />
+        <entry key="..\:/Users/mcs/Desktop/projects/mcs/LivrexPos/app/src/main/res/layout/fragment_ware_house_details.xml" value="0.264" />
+        <entry key="..\:/Users/mcs/Desktop/projects/mcs/LivrexPos/app/src/main/res/layout/item.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/mcs/Desktop/projects/mcs/LivrexPos/app/src/main/res/layout/item_contact.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/mcs/Desktop/projects/mcs/LivrexPos/app/src/main/res/layout/item_course.xml" value="0.4" />
+        <entry key="..\:/Users/mcs/Desktop/projects/mcs/LivrexPos/app/src/main/res/layout/item_delivery.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/mcs/Desktop/projects/mcs/LivrexPos/app/src/main/res/layout/item_move.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/mcs/Desktop/projects/mcs/LivrexPos/app/src/main/res/layout/item_move_details_product.xml" value="0.264" />
+        <entry key="..\:/Users/mcs/Desktop/projects/mcs/LivrexPos/app/src/main/res/layout/item_move_details_shop.xml" value="0.16" />
+        <entry key="..\:/Users/mcs/Desktop/projects/mcs/LivrexPos/app/src/main/res/layout/item_move_entry.xml" value="0.2463768115942029" />
+        <entry key="..\:/Users/mcs/Desktop/projects/mcs/LivrexPos/app/src/main/res/layout/item_move_return.xml" value="0.4" />
+        <entry key="..\:/Users/mcs/Desktop/projects/mcs/LivrexPos/app/src/main/res/layout/item_moves_by_shop.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/mcs/Desktop/projects/mcs/LivrexPos/app/src/main/res/layout/item_moves_by_shop_move.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/mcs/Desktop/projects/mcs/LivrexPos/app/src/main/res/layout/item_moves_by_shop_product.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/mcs/Desktop/projects/mcs/LivrexPos/app/src/main/res/layout/item_order.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/mcs/Desktop/projects/mcs/LivrexPos/app/src/main/res/layout/item_shop_dialog.xml" value="0.13055555555555556" />
+        <entry key="..\:/Users/mcs/Desktop/projects/mcs/LivrexPos/app/src/main/res/layout/item_stock_manager.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/mcs/Desktop/projects/mcs/LivrexPos/app/src/main/res/layout/item_ware_house.xml" value="0.4" />
+        <entry key="..\:/Users/mcs/Desktop/projects/mcs/LivrexPos/app/src/main/res/layout/layout_checkout_step_1.xml" value="0.18432971014492755" />
+        <entry key="..\:/Users/mcs/Desktop/projects/mcs/LivrexPos/app/src/main/res/layout/move_details_item_shop_product.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/mcs/Desktop/projects/mcs/LivrexPos/app/src/main/res/layout/nav_header_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/mcs/Desktop/projects/mcs/LivrexPos/app/src/main/res/layout/stock_bottom_sheet.xml" value="0.264" />
+        <entry key="..\:/Users/mcs/Desktop/projects/mcs/LivrexPos/app/src/main/res/layout/stock_filter_shop_item.xml" value="0.1" />
+        <entry key="..\:/Users/mcs/Desktop/projects/mcs/LivrexPos/app/src/main/res/layout/stock_filter_site_item.xml" value="0.4" />
+        <entry key="..\:/Users/mcs/Desktop/projects/mcs/LivrexPos/app/src/main/res/menu/activity_main_drawer.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/mcs/Desktop/projects/mcs/LivrexPos/app/src/main/res/menu/add_move_menu.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/mcs/Desktop/projects/mcs/LivrexPos/app/src/main/res/menu/bottom_navigation.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/mcs/Desktop/projects/mcs/LivrexPos/app/src/main/res/menu/menu_stock_moves_filter.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/mcs/Desktop/projects/mcs/LivrexPos/app/src/main/res/menu/search_menu.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/mcs/Desktop/projects/mcs/LivrexPos/app/src/main/res/menu/stock_fragment_menu.xml" value="0.25416666666666665" />
+        <entry key="app/src/main/res/layout/activity_product.xml" value="0.19791666666666666" />
+        <entry key="app/src/main/res/layout/activity_stock_inventory.xml" value="0.17325227963525835" />
+        <entry key="app/src/main/res/layout/fragment_add_move.xml" value="0.17325227963525835" />
+        <entry key="app/src/main/res/layout/fragment_entry.xml" value="0.17325227963525835" />
+        <entry key="app/src/main/res/layout/fragment_nav_stock_home.xml" value="0.17325227963525835" />
+        <entry key="app/src/main/res/layout/fragment_stock_delivery_men.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/fragment_stock_search.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/fragment_stock_shops.xml" value="0.17325227963525835" />
+        <entry key="app/src/main/res/layout/fragment_stock_ware_house.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/fragment_ware_house.xml" value="0.17325227963525835" />
+        <entry key="app/src/main/res/layout/item_moves_by_shop.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/item_stock_manager.xml" value="0.17325227963525835" />
+        <entry key="app/src/main/res/layout/item_ware_house.xml" value="0.17325227963525835" />
+        <entry key="app/src/main/res/layout/stock_bottom_sheet.xml" value="0.17325227963525835" />
+        <entry key="app/src/main/res/layout/stock_filter_shop_item.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/stock_filter_site_item.xml" value="0.35625" />
+        <entry key="app/src/main/res/menu/activity_main_drawer.xml" value="0.2759259259259259" />
+        <entry key="app/src/main/res/menu/add_move_menu.xml" value="0.2759259259259259" />
+        <entry key="app/src/main/res/menu/bottom_navigation.xml" value="0.35625" />
+        <entry key="app/src/main/res/menu/home_menu.xml" value="0.2759259259259259" />
+        <entry key="app/src/main/res/menu/stock_fragment_menu.xml" value="0.2759259259259259" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

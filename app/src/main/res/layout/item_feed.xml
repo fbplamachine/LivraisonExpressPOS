@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.text.TextUtils"/>
+        <variable
+            name="orderActivityFeedItem"
+            type="com.israel.livraisonexpresspos.models.Feed" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:visibility="gone"
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="@dimen/dp_60"
+            android:text="MP"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="@dimen/sp_20"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guidelineLeft_20"
+            app:layout_constraintEnd_toStartOf="@id/guidelineLeft_100"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+<!--        <TextView-->
+<!--            android:id="@+id/tvUsername"-->
+<!--            android:layout_width="@dimen/dp_0"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="@{`lecoursier avec id = `+orderActivityFeedItem.causer_id}"-->
+<!--            tools:text="Marlonne penda"-->
+<!--            android:textStyle="bold"-->
+<!--            android:paddingHorizontal="@dimen/dp_10"-->
+<!--            android:paddingVertical="@dimen/dp_5"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintStart_toEndOf="@+id/guidelineLeft_100"-->
+<!--            app:layout_constraintEnd_toStartOf="@+id/guidelineRight_20" />-->
+
+        <TextView
+            android:id="@+id/tvDescription"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:text="@{orderActivityFeedItem.description}"
+            tools:text="A modifier l'adress du receiver associée à la course "
+            android:paddingHorizontal="@dimen/dp_10"
+            android:paddingVertical="@dimen/dp_5"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guidelineLeft_100"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineRight_20" />
+
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:text="@{`le `+orderActivityFeedItem.created_at}"
+            tools:text="le 14-12-2020 10:20"
+            android:textSize="@dimen/sp_12"
+            android:paddingHorizontal="@dimen/dp_10"
+            android:paddingVertical="@dimen/dp_5"
+            app:layout_constraintTop_toBottomOf="@+id/tvDescription"
+            app:layout_constraintStart_toEndOf="@+id/guidelineLeft_100"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineRight_20" />
+
+        <View
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="@dimen/dp_1"
+            android:background="#dddddd"
+            android:layout_marginVertical="@dimen/dp_5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guidelineLeft_100"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineRight_20"
+            app:layout_constraintTop_toBottomOf="@+id/tvDate" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineLeft_20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/dp_20" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineLeft_100"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/dp_20" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineRight_20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="@dimen/dp_20" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

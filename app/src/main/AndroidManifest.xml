@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.israel.livraisonexpresspos">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".app.App"
+        android:icon="@drawable/logo_pos"
+        android:label="@string/app_name"
+        android:allowBackup="true"
+        android:hardwareAccelerated="false"
+        android:largeHeap="true"
+        android:roundIcon="@drawable/logo_pos"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <meta-data
+            android:name="firebase_performance_logcat_enabled"
+            android:value="true" />
+
+        <activity
+            android:name=".ui.inventory_management.MoveDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.inventory_management.StockInventoryActivity"
+            android:exported="false" />
+        <activity android:name=".ui.order_detail.attach.full_screen.FullScreenActivity" />
+        <activity android:name=".ui.crash.CrashActivity" />
+        <activity android:name=".ui.error.ErrorActivity" />
+        <activity android:name=".ui.statistics.shop.ShopStatisticActivity" />
+        <activity
+            android:name=".ui.FilterResultActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.notifications.NotificationActivity" />
+        <activity android:name=".ui.contact_detail.ContactDetailActivity" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity android:name=".ui.new_course.NewCourseActivity" />
+        <activity android:name=".ui.select_contact.SelectContactActivity" />
+        <activity android:name=".ui.order_list.OrderListActivity" />
+        <activity android:name=".ui.modules.ModuleActivity" />
+        <activity android:name=".ui.cart.CartActivity" />
+        <activity android:name=".ui.products.ProductActivity" />
+        <activity android:name=".ui.new_contact.NewContactActivity" />
+        <activity android:name=".ui.login.LoginActivity" />
+        <activity android:name=".ui.shops.ShopActivity">
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+
+        <meta-data
+            android:name="com.bugsnag.android.API_KEY"
+            android:value="a92a936482eee9bbe5a5d441fe65cd6d" />
+
+        <activity android:name=".ui.map.MapPickerActivity" />
+        <activity
+            android:name=".ui.splash.SplashActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ui.checkout.CheckoutActivity" />
+        <activity
+            android:name=".ui.order_detail.OrderDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".ui.statistics.sale.SalesStatisticsActivity" />
+        <activity android:name=".ui.map.MapActivity" />
+    </application>
+
+</manifest>

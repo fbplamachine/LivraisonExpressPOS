@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/manager_to_validate"
+        android:title="@string/menu_to_validate"/>
+
+    <item android:id="@+id/manager_unAssign"
+        android:title="@string/un_assign"/>
+
+    <item android:id="@+id/manager_assign"
+        android:title="@string/assign_to_delivery_man"/>
+    <item
+        android:id="@+id/manager_deliver"
+        android:title="@string/deliver"/>
+    <item
+        android:id="@+id/manager_cancel"
+        android:title="@string/cancel"/>
+    <item
+        android:id="@+id/manager_relaunch"
+        android:title="@string/relaunch"/>
+</menu>

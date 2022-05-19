@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2a5ca8</color>
+    <color name="colorPrimaryDark">#214986</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!--    CUSTOM COLORS-->
+    <color name="whatsappGreen">#25d366</color>
+    <color name="blue_50">#E3F2FD</color>
+    <color name="blue_100">#BBDEFB</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="overlay_dark_10">#1A000000</color>
+    <color name="overlay_dark_20">#33000000</color>
+    <color name="overlay_dark_30">#4D000000</color>
+    <color name="overlay_dark_40">#66000000</color>
+    <color name="overlay_dark_50">#80000000</color>
+    <color name="overlay_dark_60">#99000000</color>
+    <color name="overlay_dark_70">#B3000000</color>
+    <color name="overlay_dark_80">#CC000000</color>
+    <color name="overlay_dark_90">#000000</color>
+
+    <color name="grey_3">#f7f7f7</color>
+    <color name="grey_5">#f2f2f2</color>
+    <color name="grey_10">#e6e6e6</color>
+    <color name="grey_20">#cccccc</color>
+    <color name="grey_40">#999999</color>
+    <color name="grey_60">#666666</color>
+    <color name="grey_80">#37474F</color>
+    <color name="grey_90">#263238</color>
+
+    <!--    STATUS COLORS-->
+    <color name="en_cours">#81c784</color>
+    <color name="en_attente">#ffb74d</color>
+    <color name="terminee">#90caf9</color>
+    <color name="non_assignee">@color/overlay_dark_30</color>
+    <color name="white">#FFFFFF</color>
+    <color name="error_red">#EB4242</color>
+    <color name="separator_grey">#dddddd</color>
+    <color name="order_detail_icon_tint">#555</color>
+    <color name="light_blue_600">#FF039BE5</color>
+    <color name="light_blue_900">#FF01579B</color>
+    <color name="light_blue_A200">#FF40C4FF</color>
+    <color name="light_blue_A400">#FF00B0FF</color>
+    <color name="black_overlay">#66000000</color>
+</resources>

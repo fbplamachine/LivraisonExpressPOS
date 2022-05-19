@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/dp_20">
+
+            <ImageButton
+                android:id="@+id/img_btn_close"
+                app:tint="@color/grey_80"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_10"
+                android:src="@drawable/ic_close" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp_20"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/filter"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/grey_90" />
+
+            <ImageButton
+                android:id="@+id/img_btn_filter"
+                app:tint="@color/grey_80"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_10"
+                android:src="@drawable/ic_round_done_24" />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp_20"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginVertical="@dimen/dp_20">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="Magasin"
+                        android:layout_marginBottom="@dimen/dp_5"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+                    <TextView
+                        android:id="@+id/tv_shop_name"
+                        app:drawableEndCompat="@drawable/ic_arrow_drop_down"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_40"
+                        android:background="@drawable/filter_input"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:paddingHorizontal="@dimen/dp_10"
+                        android:text="Sélectionnez un magasin"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                        android:textColor="@color/grey_60" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="@dimen/dp_20">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="Site de depart"
+                        android:layout_marginBottom="@dimen/dp_5"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+                    <TextView
+                        android:id="@+id/tv_departure_site"
+                        app:drawableEndCompat="@drawable/ic_arrow_drop_down"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_40"
+                        android:background="@drawable/filter_input"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:paddingHorizontal="@dimen/dp_10"
+                        android:text="Sélectionnez un site"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                        android:textColor="@color/grey_60" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="@dimen/dp_20">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="Site d'arriver : "
+                        android:layout_marginBottom="@dimen/dp_5"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+                    <TextView
+                        android:id="@+id/tv_arrival_site"
+                        android:layout_width="match_parent"
+                        app:drawableEndCompat="@drawable/ic_arrow_drop_down"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_weight="1"
+                        android:background="@drawable/filter_input"
+                        android:gravity="center_vertical"
+                        android:hint="Sélectionnez un site"
+                        android:paddingHorizontal="@dimen/dp_10"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                        android:textColor="@color/grey_60" />
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="@dimen/dp_20">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Type de mouvement"
+                        android:layout_marginBottom="@dimen/dp_5"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/groupMoveType"
+                        app:singleSelection="true"
+                        android:paddingHorizontal="@dimen/dp_10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/filter_input">
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chipAll"
+                            style="@style/Widget.MaterialComponents.Chip.Filter"
+                            app:checkedIconTint="@color/white"
+                            app:chipBackgroundColor="@color/colorAccent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="Tous"
+                            android:textColor="@color/white" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chipEntries"
+                            style="@style/Widget.MaterialComponents.Chip.Filter"
+                            app:checkedIconTint="@color/white"
+                            app:chipBackgroundColor="@color/colorAccent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Entrées"
+                            android:textColor="@color/white" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chipExits"
+                            style="@style/Widget.MaterialComponents.Chip.Filter"
+                            app:checkedIconTint="@color/white"
+                            app:chipBackgroundColor="@color/colorAccent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Sorties"
+                            android:textColor="@color/white" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chipReturns"
+                            style="@style/Widget.MaterialComponents.Chip.Filter"
+                            app:checkedIconTint="@color/white"
+                            app:chipBackgroundColor="@color/colorAccent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Retours"
+                            android:textColor="@color/white" />
+
+                    </com.google.android.material.chip.ChipGroup>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <LinearLayout
+                    android:id="@+id/layoutAdvancedSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="Date de creation "
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/groupDate"
+                        app:singleSelection="true"
+                        android:paddingHorizontal="@dimen/dp_10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/filter_input"
+                        android:layout_marginVertical="@dimen/dp_5">
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chipToday"
+                            style="@style/Widget.MaterialComponents.Chip.Filter"
+                            app:checkedIconTint="@color/white"
+                            app:chipBackgroundColor="@color/colorAccent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="aujourd'hui"
+                            android:textColor="@color/white" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chipYesterday"
+                            style="@style/Widget.MaterialComponents.Chip.Filter"
+                            app:checkedIconTint="@color/white"
+                            app:chipBackgroundColor="@color/colorAccent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="hier"
+                            android:textColor="@color/white" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chipTwoDayEarlier"
+                            style="@style/Widget.MaterialComponents.Chip.Filter"
+                            app:checkedIconTint="@color/white"
+                            app:chipBackgroundColor="@color/colorAccent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="les deux derniers jours"
+                            android:textColor="@color/white"
+                            android:visibility="gone" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chipThreeDayEarlier"
+                            style="@style/Widget.MaterialComponents.Chip.Filter"
+                            app:checkedIconTint="@color/white"
+                            app:chipBackgroundColor="@color/colorAccent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="les trois derniers jours"
+                            android:textColor="@color/white"
+                            android:visibility="gone" />
+
+                    </com.google.android.material.chip.ChipGroup>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginVertical="@dimen/dp_10"
+                    android:background="@color/overlay_dark_10" />
+
+                <TextView
+                    android:id="@+id/tv_reset_filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    android:drawableLeft="@drawable/ic_round_delete_outline_24"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/dp_10"
+                    android:paddingVertical="@dimen/dp_5"
+                    android:text="Vider le filtre" />
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</layout>

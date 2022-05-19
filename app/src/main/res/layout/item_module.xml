@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="module"
+            type="com.israel.livraisonexpresspos.models.Module" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:foreground="?attr/selectableItemBackground"
+        android:layout_width="match_parent"
+        android:id="@+id/moduleItem"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivModule"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:padding="@dimen/dp_10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@={module.libelle}"
+            android:id="@+id/tvModule"
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            app:layout_constraintTop_toBottomOf="@id/ivModule"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_margin="@dimen/dp_8"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <View
+            android:layout_width="1dp"
+            app:layout_constraintTop_toTopOf="@id/ivModule"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/viewH"
+            android:background="@color/overlay_dark_10" />
+
+        <View
+            android:layout_width="1dp"
+            app:layout_constraintTop_toTopOf="@id/ivModule"
+            android:layout_height="0dp"
+            android:layout_marginVertical="@dimen/dp_2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/viewH"
+            android:background="@color/overlay_dark_10" />
+
+        <View
+            android:id="@+id/viewH"
+            android:layout_marginHorizontal="@dimen/dp_2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/dp_8"
+            android:background="@color/overlay_dark_10"
+            app:layout_constraintTop_toBottomOf="@id/tvModule" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

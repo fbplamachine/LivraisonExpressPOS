@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/group_delivery"
+        android:visible="false"
+        android:title="@string/group_delivery">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_to_validate"
+                    app:actionLayout="@layout/menu_counter"
+                    android:visible="false"
+                    android:title="@string/menu_to_validate" />
+
+                <item
+                    android:id="@+id/nav_unassigned"
+                    app:actionLayout="@layout/menu_counter"
+                    android:title="@string/menu_unassigned" />
+                <item
+                    android:id="@+id/nav_to_be_treated"
+                    app:actionLayout="@layout/menu_counter"
+                    android:title="@string/menu_to_be_treated" />
+
+                <item
+                    android:id="@+id/nav_my_orders"
+                    app:actionLayout="@layout/menu_counter"
+                    android:title="@string/menu_my_orders" />
+
+                <item
+                    android:id="@+id/nav_cancel"
+                    app:actionLayout="@layout/menu_counter"
+                    android:visible="false"
+                    android:title="@string/menu_cancelled" />
+
+                <item
+                    android:id="@+id/nav_today"
+                    app:actionLayout="@layout/menu_counter"
+                    android:title="@string/menu_today" />
+
+                <item
+                    android:visible="false"
+                    android:id="@+id/nav_filter"
+                    android:title="@string/search" />
+            </group>
+        </menu>
+    </item>
+
+    <item android:id="@+id/group_pos"
+        android:visible="false"
+        android:title="@string/group_pos">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_place_order"
+                    android:title="@string/menu_place_order" />
+            </group>
+        </menu>
+    </item>
+
+    <item android:id="@+id/group_stock_module"
+        android:visible="true"
+        android:title="@string/group_external_modules">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_stock"
+                    android:title="@string/nav_inventory_management" />
+                <item
+                    android:id="@+id/nav_fleet"
+                    android:title="@string/nav_parking" />
+            </group>
+        </menu>
+    </item>
+
+    <item android:id="@+id/group_statistics"
+        android:title="@string/reporting">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_stat_delivery_men"
+                    android:visible="false"
+                    android:title="coursiers" />
+                <item
+                    android:id="@+id/nav_stat_orders"
+                    android:visible="false"
+                    android:title="courses" />
+                <item
+                    android:id="@+id/nav_stat_products"
+                    android:visible="false"
+                    android:title="Produits" />
+                <item
+                    android:id="@+id/nav_stat_sales"
+                    android:visible="false"
+                    android:title="Ventes" />
+                <item
+                    android:id="@+id/nav_stat_cities"
+                    android:visible="false"
+                    android:title="Villes" />
+                <item
+                    android:id="@+id/nav_my_shops"
+                    android:visible="false"
+                    android:title="@string/my_shops" />
+            </group>
+        </menu>
+    </item>
+    <item android:id="@+id/group_client"
+        android:visible="false"
+        android:title="@string/group_client">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_client"
+                    android:title="@string/contacts" />
+                <item
+                    android:id="@+id/nav_my_contacts"
+                    android:title="@string/my_contacts" />
+            </group>
+        </menu>
+    </item>
+    <item android:id="@+id/group_profile"
+        android:title="Compte">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_settings"
+                    android:title="@string/settings"/>
+                <item
+                    android:id="@+id/nav_logout"
+                    android:title="@string/logout"/>
+            </group>
+        </menu>
+    </item>
+
+</menu>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <item
+        android:id="@+id/menu_close"
+        android:title="@string/menu_close"
+        android:iconTint="@color/quantum_black_100"
+        android:icon="@drawable/ic_close"
+        app:showAsAction="always"
+        tools:targetApi="o" />
+</menu>

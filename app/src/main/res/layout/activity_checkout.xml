@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        tools:context=".ui.checkout.CheckoutActivity"
+        android:layout_height="match_parent">
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:id="@+id/toolbar"
+            app:navigationIcon="@drawable/ic_arrow_back_white_24"
+            app:titleTextColor="@color/white"
+            app:title="@string/validation"
+            android:background="@color/colorPrimary"/>
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/dp_10">
+                <LinearLayout
+                    android:layout_width="@dimen/dp_35"
+                    android:layout_height="@dimen/dp_35"
+                    android:gravity="center_horizontal">
+                    <View
+                        android:layout_width="@dimen/dp_2"
+                        android:layout_height="match_parent"
+                        android:background="@color/grey_10"/>
+                </LinearLayout>
+
+                <include layout="@layout/layout_checkout_step_1"
+                    android:id="@+id/includeSender"/>
+
+                <include layout="@layout/layout_checkout_step_2"
+                    android:id="@+id/includeReceiver"/>
+
+                <include layout="@layout/layout_checkout_step_3"
+                    android:id="@+id/includeDelivery"/>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</layout>
